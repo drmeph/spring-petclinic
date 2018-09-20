@@ -103,11 +103,11 @@
     </dependency>
     <!-- end of webjars -->
 
-    <dependency>
+    <!--<dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-devtools</artifactId>
       <optional>true</optional>
-    </dependency>
+    </dependency>-->
   </dependencies>
 
   <build>
@@ -175,24 +175,6 @@
           <generateGitPropertiesFilename>${project.build.outputDirectory}/git.properties
           </generateGitPropertiesFilename>
           <failOnNoGitDirectory>false</failOnNoGitDirectory>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.7.0</version>
-        <configuration>
-            <compilerArgs>
-                <arg>--add-modules</arg>
-                <arg>java.xml.bind</arg>
-            </compilerArgs>
-        </configuration>
-      </plugin>
-
-      <plugin>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.22.0</version>
-        <configuration>
-            <argLine>--add-modules java.xml.bind</argLine>
         </configuration>
       </plugin>
         <plugin>
